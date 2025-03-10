@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "aframe";
 import "aframe-ar";
+import DocImage from "../assets/Doctor.glb"
 
 const ObjectRender = () => {
   useEffect(() => {
@@ -22,7 +23,7 @@ const ObjectRender = () => {
       >
         {/* Fix for Material Errors */}
         <a-assets>
-          <a-asset-item id="myModel" src="./3d-model.glb"></a-asset-item>
+          <a-asset-item id="myModel" src={DocImage}></a-asset-item>
         </a-assets>
 
         <a-marker preset="hiro">

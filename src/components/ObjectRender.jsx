@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react'
 
 const ObjectRender = () => {
   useEffect(() => {
@@ -12,17 +12,20 @@ const ObjectRender = () => {
   }, []);
   return (
     <div>
-      <a-scene mindar-image="imageTargetSrc: ./marker.mind;" embedded arjs>
-        <a-camera position="0 0 0" look-controls="false"></a-camera>
+    <a-scene mindar-image embedded color-space="sRGB" renderer="antialias: true">
+      {/* AR Camera */}
+      <a-camera position="0 0 0"></a-camera>
 
-        {/* AR Marker */}
-        <a-marker preset="hiro">
-          {/* 3D Object */}
-          <a-box position="0 0.5 0" material="color: red"></a-box>
-        </a-marker>
-      </a-scene>
-    </div>
-  );
-};
+      {/* Marker-Based AR Object (Change this to a 3D model or custom shape) */}
+      <a-marker preset="hiro">
+        <a-box position="0 0.5 0" material="color: red;"></a-box>
+      </a-marker>
 
-export default ObjectRender;
+      {/* Allow markers to be tracked */}
+      <a-entity mindar-image-target="targetIndex: 0"></a-entity>
+    </a-scene>
+  </div>
+  )
+}
+
+export default ObjectRender

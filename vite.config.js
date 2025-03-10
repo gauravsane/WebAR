@@ -6,5 +6,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: "192.168.1.26"
-  }
+  },
+  build: {
+    assetsInclude: ["**/*.glb", "**/*.gltf"],
+  },
 })

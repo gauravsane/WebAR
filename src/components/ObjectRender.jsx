@@ -22,7 +22,7 @@ const ObjectRender = () => {
       >
         {/* Fix for Material Errors */}
         <a-assets>
-          <a-asset-item id="myModel" src="/public/Doctor.glb"></a-asset-item>
+          <a-asset-item id="myModel" src="/Doctor.glb"></a-asset-item>
         </a-assets>
 
         <a-marker preset="hiro">

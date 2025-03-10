@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "aframe";
 import "aframe-ar";
-import DocImage from "../assets/Doctor.glb"
 
 const ObjectRender = () => {
   useEffect(() => {
